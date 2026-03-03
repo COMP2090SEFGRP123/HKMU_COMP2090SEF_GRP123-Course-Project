@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
-from library_backend import *
+from model import *
 from systemt import *
 class LibraryGUI:
     def __init__(self, root, library_system):
