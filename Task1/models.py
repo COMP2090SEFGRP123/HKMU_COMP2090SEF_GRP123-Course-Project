@@ -1,9 +1,10 @@
 class Book:
-    def __init__(self, title, author, isbn):
+    def __init__(self, title, author, isbn, year):
         self._title = title
         self._author = author
         self._isbn = isbn
-        self._borrowed = False   # book status
+        self._year = year
+        self._borrowed = False
 
     def borrow(self):
         if not self._borrowed:
