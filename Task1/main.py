@@ -251,7 +251,7 @@ class LibraryGUI:
 
 #test
 if __name__ == "__main__":
-    my_library = Library("City Public Library")
+    my_library = LibrarySystem()
     my_library.add_book(Book("Python Basics", "John Doe", "101", 2020))
     my_library.add_book(Book("Advanced Math", "Jane Smith", "102", 2019))
     my_library.add_book(Book("History of Art", "Bob Ross", "103", 2021))
