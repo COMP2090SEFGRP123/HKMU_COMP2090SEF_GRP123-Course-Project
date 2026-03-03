@@ -27,6 +27,19 @@ class Book:
             status = "Available"
         return self._title + " by " + self._author + " (ISBN: " + self._isbn + ") - " + status
 
+    def borrow_book(self, book):
+        if book._borrowed:
+            return False, "Book already borrowed."
+        book.borrow()
+        return True, "Book borrowed successfully."
+
+
+    def return_book(self, book):
+        if not book._borrowed:
+            return False, "Book was not borrowed."
+        book.return_book()
+        return True, "Book returned successfully."
+
     @property
     def title(self):
         return self._title
