@@ -55,3 +55,11 @@ class LibrarySystem:
 
     def total_books(self):
         return len(self.books)
+    
+    def search_book_by_isbn(self, isbn):
+        for book in self.books:
+            if book._isbn == isbn:
+                print("Found:", book)
+                return book
+        print("Book not found.")
+        return None
