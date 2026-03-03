@@ -63,3 +63,21 @@ class LibrarySystem:
                 return book
         print("Book not found.")
         return None
+    
+    def get_all_books(self):
+        return self.books
+
+
+    def find_book_by_isbn(self, isbn):
+        for book in self.books:
+            if book._isbn == isbn:
+                return book
+        return None
+
+
+    def find_books_by_title(self, title):
+        result = []
+        for book in self.books:
+            if title.lower() in book._title.lower():
+                result.append(book)
+        return result
