@@ -49,8 +49,13 @@ class Book:
 
 
 class User:
-    def __init__(self, name):
+    def __init__(self, name, userid):
         self._name = name
+        self._userid = userid
+
+    @property
+    def name(self):
+        return self._name
 
     def get_role(self):
         return "User"
@@ -81,3 +86,8 @@ class Admin(User):
             library.books.remove(book)
             return "Book removed from library."
         return "Book not found."
+
+
+class Student(User):
+    def get_role(self):
+        return "Student"
