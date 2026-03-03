@@ -1,5 +1,27 @@
 class Book:
-    def __init__(self, title, author):
-        self._book_title = title
-        self._book_author = author
-        self._borrowed = False
+    def __init__(self, title, author, isbn):
+        self._title = title
+        self._author = author
+        self._isbn = isbn
+        self._borrowed = False   # book status
+
+    def borrow(self):
+        if not self._borrowed:
+            self._borrowed = True
+            print("Book borrowed successfully.")
+        else:
+            print("This book is already borrowed.")
+
+    def return_book(self):
+        if self._borrowed:
+            self._borrowed = False
+            print("Book returned.")
+        else:
+            print("This book was not borrowed.")
+
+    def __str__(self):
+        if self._borrowed:
+            status = "Borrowed"
+        else:
+            status = "Available"
+        return self._title + " by " + self._author + " (ISBN: " + self._isbn + ") - " + status
