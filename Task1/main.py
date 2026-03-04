@@ -54,6 +54,7 @@ class LibraryGUI:
             return
         if role_input == "admin":
             self.current_user = Admin(name, userid)
+        elif role_input == "student":
             self.current_user = Student(name, userid)
         else:
             messagebox.showerror("Error", "Invalid Role. Please type 'admin' or 'student'.")
