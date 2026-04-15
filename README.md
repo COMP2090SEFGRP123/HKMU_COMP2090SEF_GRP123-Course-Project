@@ -13,3 +13,4 @@ Admins can add new books (while also set its title, author, ISBN, year)
 Admins can permanently remove books
 
 ## Download
+Please refer to the video and readme in the corresponding task
