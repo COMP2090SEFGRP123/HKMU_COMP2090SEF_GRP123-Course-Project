@@ -22,7 +22,7 @@ class LibraryGUI:
         for widget in self.root.winfo_children():
             widget.destroy()
 
-    # ====================== LOGIN ======================
+    #======login======
     def load_users(self):
         if os.path.exists("users.json"):
             try:
@@ -113,7 +113,7 @@ class LibraryGUI:
         tk.Button(top, text="Verify", command=verify_admin, width=15, height=2).pack(pady=10)
         admin_pass_entry.bind("<Return>", lambda event: verify_admin())
 
-    # ====================== DASHBOARD ======================
+    #======dashboard======
     def show_dashboard(self):
         self.clear_window()
 
@@ -175,7 +175,7 @@ class LibraryGUI:
 
         self.show_all_books()
 
-    # ====================== GUI HELPERS ======================
+    #======gui======
     def update_table(self, books):
         for item in self.tree.get_children():
             self.tree.delete(item)
@@ -214,7 +214,7 @@ class LibraryGUI:
     def show_all_books(self):
         self.update_table(self.library.get_all_books())
 
-    # ====================== SHORT GUI ACTIONS ======================
+    #======short action======
     def borrow_action(self):
         book_id = self.get_selected_book_id()
         if book_id:
