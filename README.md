@@ -1,6 +1,9 @@
 # HKMU_COMP2090SEF_GRP123-Course-Project
 ## Library Management System 
 A library management system built with Python and Tkinter. This application utilizes Object-Oriented Programming (OOP) principles to manage library operations.
+## Introduction Video Link
+Task1:https://drive.google.com/file/d/1E0DIBHFECdyFwx__XZQ-LXXTbS9RZ8i0/view?usp=drive_link
+Task2:
 
 ## Features
 ### Login system
